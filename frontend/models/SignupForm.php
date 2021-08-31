@@ -14,8 +14,12 @@ class SignupForm extends Model
     public $username;
     public $email;
     public $password;
-
-
+    public $name;
+    public $address;
+    public $district;
+    public $pincode;
+    public $phoneno;
+    public $passwordConfirm;
     /**
      * {@inheritdoc}
      */
@@ -23,18 +27,20 @@ class SignupForm extends Model
     {
         return [
             ['username', 'trim'],
-            ['username', 'required'],
+            [['username','name','address','phoneno','pincode','district'], 'required'],
             ['username', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This username has already been taken.'],
             ['username', 'string', 'min' => 2, 'max' => 255],
-
+            [['name','address','phoneno','pincode','district'],'string'],
             ['email', 'trim'],
             ['email', 'required'],
             ['email', 'email'],
             ['email', 'string', 'max' => 255],
             ['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This email address has already been taken.'],
 
-            ['password', 'required'],
-            ['password', 'string', 'min' => Yii::$app->params['user.passwordMinLength']],
+            [['password','passwordConfirm'], 'required'],
+            [['password','passwordConfirm'], 'string', 'min' => Yii::$app->params['user.passwordMinLength']],
+            ['passwordConfirm', 'compare', 'compareAttribute'=>'password', 'message'=>"Passwords don't match" ],
+
         ];
     }
 
@@ -48,15 +54,14 @@ class SignupForm extends Model
         if (!$this->validate()) {
             return null;
         }
-        
+
         $user = new User();
         $user->username = $this->username;
         $user->email = $this->email;
         $user->setPassword($this->password);
         $user->generateAuthKey();
         $user->generateEmailVerificationToken();
-
-        return $user->save() && $this->sendEmail($user);
+        return $user->save()?$user:false;
     }
 
     /**
