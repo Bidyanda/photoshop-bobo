@@ -16,7 +16,7 @@ class AppAssetCustomer extends AssetBundle
       "css/bootstrap.css",
       "css/fonts.css",
       "css/style.css",
-      // 'css/site.css'
+      'css/site.css'
     ];
     public $js = [
         'js/main.js',
