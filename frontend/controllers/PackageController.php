@@ -148,8 +148,26 @@ class PackageController extends Controller
      */
     public function actionDelete($package_id)
     {
-        $this->findModel($package_id)->delete();
-
+        $transaction = Yii::$app->db->beginTransaction();
+        $flag = 1;
+        try{
+          if(PackageItem::deleteAll(['package_id'=>$package_id])){
+            if(!Package::deleteAll(['package_id'=>$package_id])){
+              $flag = 0;
+            }
+          }else
+            $flag = 0;
+          if($flag){
+            $transaction->commit();
+            Yii::$app->session->setFlash('success','Package Deleted successfully.');
+          }else {
+            $transaction->rollBack();
+            Yii::$app->session->setFlash('danger','Package Deleted Failed.');
+          }
+        }catch(Exception $e){
+          $transaction->rollBack();
+          Yii::$app->session->setFlash('danger','Package Deleted Failed.');
+        }
         return $this->redirect(['index']);
     }
 
