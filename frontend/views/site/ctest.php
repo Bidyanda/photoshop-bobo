@@ -152,7 +152,7 @@
     </div>
   </section>
   <!-- Testimonials-->
-  <section class="section section-lg bg-gray-100 text-center">
+  <!-- <section class="section section-lg bg-gray-100 text-center">
     <div class="container">
       <h3 class="section-title">Testimonials</h3>
       <div class="slick-widget-testimonials wow fadeIn">
@@ -170,10 +170,8 @@
           <div class="item wow-outer"><img class="wow slideInLeft" src="/images/testimonials-person-6-96x96.jpg" alt="" width="96" height="96"/>
           </div>
         </div>
-        <!-- Slick Carousel-->
         <div class="slick-slider carousel-parent" data-arrows="false" data-loop="true" data-dots="false" data-swipe="false" data-items="1" data-fade="true" data-child="#child-carousel" data-for="#child-carousel">
           <div class="item">
-            <!-- Quote Light 1-->
             <blockquote class="quote-light">
               <cite class="quote-light-cite">Ningthoujam Bidya Devi</cite>
               <p class="quote-light-caption">Regular Client</p><span class="icon quote-light-mark linearicons-quote-open"></span>
@@ -183,7 +181,6 @@
             </blockquote>
           </div>
           <div class="item">
-            <!-- Quote Light 2-->
             <blockquote class="quote-light">
               <cite class="quote-light-cite">Ningthoujam Babu</cite>
               <p class="quote-light-caption">Regular Client</p><span class="icon quote-light-mark linearicons-quote-open"></span>
@@ -193,7 +190,6 @@
             </blockquote>
           </div>
           <div class="item">
-            <!-- Quote Light 3-->
             <blockquote class="quote-light">
               <cite class="quote-light-cite">Nongmeikapam Anil</cite>
               <p class="quote-light-caption">Regular Client</p><span class="icon quote-light-mark linearicons-quote-open"></span>
@@ -203,7 +199,6 @@
             </blockquote>
           </div>
           <div class="item">
-            <!-- Quote Light 4 -->
             <blockquote class="quote-light">
               <cite class="quote-light-cite">Samantha Lee</cite>
               <p class="quote-light-caption">Regular Client</p><span class="icon quote-light-mark linearicons-quote-open"></span>
@@ -213,7 +208,6 @@
             </blockquote>
           </div>
           <div class="item">
-            <!-- Quote Light 3-->
             <blockquote class="quote-light">
               <cite class="quote-light-cite">Jane Peterson</cite>
               <p class="quote-light-caption">Regular Client</p><span class="icon quote-light-mark linearicons-quote-open"></span>
@@ -223,7 +217,6 @@
             </blockquote>
           </div>
           <div class="item">
-            <!-- Quote Light 5-->
             <blockquote class="quote-light">
               <cite class="quote-light-cite">Sandra Warner</cite>
               <p class="quote-light-caption">Regular Client</p><span class="icon quote-light-mark linearicons-quote-open"></span>
@@ -235,7 +228,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 </div>
 
 <!-- </div> -->
