@@ -346,7 +346,7 @@ class SiteController extends Controller
     public function actionGallery()
     {
       $this->layout = 'main-customer';
-      $gallery = Gallery::find()->orderby('id desc')->all();
+      $gallery = Gallery::find()->orderby('gallery_id desc')->all();
       return $this->render('gallery',['gallery'=>$gallery]);
     }
 
