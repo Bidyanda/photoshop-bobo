@@ -40,7 +40,7 @@ class GallerySearh extends Gallery
      */
     public function search($params)
     {
-        $query = Gallery::find();
+        $query = Gallery::find()->orderby('id desc');
 
         // add conditions that should always apply here
 
