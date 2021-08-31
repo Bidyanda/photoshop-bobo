@@ -18,7 +18,7 @@ $items = Item::find()->select('item_id,item_name')->all();
 
 <div class="package-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['id'=>'package']); ?>
     <div class="row">
       <div class="col-md-4">
         <?= $form->field($model, 'category_id')->dropdownlist($category,['prompt'=>'--Select Category--'])->label('Category') ?>
