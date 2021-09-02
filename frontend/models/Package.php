@@ -39,7 +39,7 @@ class Package extends \yii\db\ActiveRecord
             [['category_id', 'no_of_camera_man'], 'integer'],
             ['price','number'],
             [['description', 'package_name', 'image'], 'string', 'max' => 255],
-            [['image'], 'image', 'extensions' => 'jpg jpeg','minSize'=>50, 'maxSize' => 3145728, 'tooBig' => 'Alert! Maximum file size allowed is 3MB', 'maxWidth'=>1000, 'maxHeight'=>1000],
+            [['image'], 'image', 'extensions' => 'jpg jpeg','minSize'=>50, 'maxSize' => 3145728, 'tooBig' => 'Alert! Maximum file size allowed is 3MB', 'maxWidth'=>1500, 'maxHeight'=>1500],
             [['category_id'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['category_id' => 'category_id']],
         ];
     }
