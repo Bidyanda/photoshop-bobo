@@ -18,7 +18,7 @@
           </div>
           <div class="col-md-6 col-lg-5 col-xl-4 col-offset-1">
             <div class="wow-outer">
-              <h4 class="font-weight-light wow slideInUp" data-wow-delay=".2s">Based in Imphal, I specialize in various kinds of photography</h4>
+              <h4 class="font-weight-light wow slideInUp" data-wow-delay=".2s">Based in Imphal, I specialize in various<br> kinds of photography</h4>
             </div>
             <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow slideInUp" href="#" data-wow-delay=".3s">View Portfolio</a></div>
           </div>

@@ -144,7 +144,7 @@ Modal::end();
                 </div>
                 <div class="col-sm-6 col-md-7 col-lg-4">
                   <h4>Newsletter</h4>
-                  <p>Sign up to my newsletter and be the first to know about the latest news, special offers, events, and discounts.</p>
+                  <!-- <p>Sign up to my newsletter and be the first to know about the latest news, special offers, events, and discounts.</p> -->
                   <!-- RD Mailform-->
                   <!-- <form class="rd-form rd-mailform form-inline" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
                     <div class="form-wrap">
@@ -162,7 +162,7 @@ Modal::end();
           <div class="container">
             <div class="footer-standard-aside"><a class="brand" href="#"><img src="/images/logo-inverse-176x28.png" alt="" width="176" height="28" srcset="/images/logo-inverse-352x56.png 2x"/></a>
               <!-- Rights-->
-              <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved.</span><span>&nbsp;</span><br class="d-sm-none"/>Design&nbsp;by&nbsp;<a href="https://www.google.com/">Bobocha</a></p>
+              <p class="rights" style="padding-right:50px;"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved.</span><span>&nbsp;</span><br class="d-sm-none"/>Design&nbsp;by&nbsp;<a href="https://www.google.com/">Bobocha</a></p>
             </div>
           </div>
         </footer>
