@@ -39,6 +39,7 @@
                                   <p class="thumbnail-corporate-title"><?= Html::a($pak->package_name,['/package/view','package_id'=>$pak->package_id],['class'=>'openModallg'])?></p>
                                   <p><?= $pak->description ?></p>
                                   <p><?= $pak->no_of_camera_man." Camera Men"?></p>
+                                  <p>Rs.<?= $pak->price?></p>
                                   <a class="thumbnail-corporate-link" href="/<?= $pak->image?>" data-lightgallery="item">
                                     <span class="icon mdi mdi-magnify"></span>
                                     <span class="icon mdi mdi-magnify"></span>
