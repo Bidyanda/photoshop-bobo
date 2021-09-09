@@ -1,7 +1,10 @@
 <?php
   use yii\helpers\Html;
+  use yii\helpers\ArrayHelper;
   use yii\bootstrap\Modal;
+  use frontend\models\Category;
   use dosamigos\datepicker\DatePicker;
+  $category = ArrayHelper::map(Category::find()->all(),'category_id','category_name');
   $today = date("Y-m-d");
   // Modal::begin([
   //     'id' => 'page-modal-lg',
@@ -30,7 +33,7 @@
               ?>
               <div class="col-12 col-sm-6 col-lg-4 isotope-item wow-outer">
                               <!-- Thumbnail Corporate-->
-                              <p class="thumbnail-corporate-title"><a href="#"><?= $pak->package_name?></a></p>
+                              <p class="thumbnail-corporate-title"><a href="#"><?= $pak->package_name."(".$category[$pak['category_id']].")"?></a></p>
                               <article class="thumbnail-corporate wow slideInDown"><img class="thumbnail-corporate-image" src="/<?= $pak->image?>" alt="" width="370" height="256"/>
                                 <div class="thumbnail-corporate-caption">
                                   <p class="thumbnail-corporate-title"><?= Html::a($pak->package_name,['/package/view','package_id'=>$pak->package_id],['class'=>'openModallg'])?></p>
